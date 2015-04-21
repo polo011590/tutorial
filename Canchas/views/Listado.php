@@ -14,26 +14,27 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/bootstrap-responsive.css">
     </head>
     <body>
-
-
         <div style="width: 90%; margin: 0px auto; margin-top: 30px;">
             <?php
+            if (empty($_GET["V"])){}else{$var1 = $_GET["v"];}
             require_once '../../config.php';
             $puente = new config();
             $conn = $puente->Conectar_BD();
-            $query = oci_parse($conn, 'SELECT * FROM usuarios');
+            $query = oci_parse($conn, 'SELECT * FROM canchas ');
+//            OCIBindByName($query, ":dato1", $var1);
             if (!$query) {
                 $e = oci_error($conn);
                 trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-            }  ?>
-            
+            }
+            ?>
+
             <table class="table table-striped" style="border: solid 2px #003bb3" >
                 <thead>
                     <tr>
                         <th>Numero</th>
-                        <th>Cedula</th>
-                        <th>Nombres</th>
-                        <th>Apellidos</th>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Direccion</th>
 
                     </tr>
                 </thead>
@@ -47,22 +48,22 @@ and open the template in the editor.
                         <tr>
                             <td><?php echo $c; ?></td>
                             <td><?php echo ociresult($query, "ID"); ?></td>
-                            <td><?php echo ociresult($query, "NOMBRES"); ?></td>
-                            <td><?php echo ociresult($query, "APELLIDOS"); ?></td>
+                            <td><?php echo ociresult($query, "NOMBRE"); ?></td>
+                            <td><?php echo ociresult($query, "DIRECCION"); ?></td>
                         </tr>
-                    <?php
+                        <?php
                     }
-//                    echo oci_num_rows($query);
+                    session_start();
+                    $_SESSION['c'] = $c;
                     OCICommit($conn);
                     OCILogoff($conn);
                     oci_free_statement($query);
                     ?>
                 </tbody>
             </table>
-            
-            
-            <button class="btn btn-success" onclick="javascript:history.go(-1);">Atr&aacute;s</button>
-        </div>
 
+           
+        </div>
+      
     </body>
 </html>

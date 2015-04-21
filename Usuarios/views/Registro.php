@@ -20,6 +20,7 @@ and open the template in the editor.
 </script>
     </head>
     <body>
+       
         <div id="capa_load">
             <div id="logo_load">
 
@@ -45,7 +46,7 @@ and open the template in the editor.
             <fieldset>
                 <legend style="color: #339900;">Registro de Usuario</legend>
                 <form id="formreg" action="process.php?c=1" method="post">
-                    <label>C&eacute;dula: </label><input required style="width: 100%;" type="text" name="cedula">
+                    <label>C&eacute;dula: </label><input required style="width: 100%;" type="number" name="cedula">
                     <label>Nombres: </label><input required style="width: 100%;" type="text" name="nombres">
                     <label>Apellidos: </label><input required style="width: 100%;" type="text" name="apellidos">
                     <label>E-mail: </label><input required style="width: 100%;" type="email" name="email">
@@ -56,8 +57,8 @@ and open the template in the editor.
                     </select>
                     <label>Fecha de Nacimiento: </label><input required style="width: 100%;" type="date" name="fecha_nac">
                     <label>Direcci&oacute;n: </label><input required style="width: 100%;" type="text" name="direccion">
-                    <label>Tel&eacute;fono: </label><input pattern="[0-9]{1,7}" style="width: 100%;" type="text" name="telefono">
-                    <label>Celular: </label><input required pattern="[0-9]{1,10}" style="width: 100%;" type="text" name="celular">
+                    <label>Tel&eacute;fono: </label><input pattern="[0-9]{1,7}" style="width: 100%;" type="tel" name="telefono">
+                    <label>Celular: </label><input required pattern="[0-9]{1,10}" style="width: 100%;" type="number" name="celular">
                     <label>Profesi&oacute;n: </label><input required style="width: 100%;" type="text" name="profesion">
                     <label>Contrase&ntilde;a: </label><input required style="width: 100%;" type="password" name="contrasena">
                     <button type="submit"  style="width: 100%;" class="btn btn-success"><i class="icon-ok"> </i> Registrar</button>
