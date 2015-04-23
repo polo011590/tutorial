@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -59,7 +59,7 @@ session_start();
                                     <a style="font-size: 12px;" class="btn btn-primary" href="../../Detalle_Cancha/views/Registro.php">Precios</a><br><br>
                                     <a style="font-size: 12px;" class="btn btn-success" href="../../Usuarios/views/Registro.php">Usuarios</a><br><br>
                                     <a style="font-size: 12px;" class="btn btn-primary" href="../../Administradores/views/Registro.php">Administradores</a><br><br>
-                                    <a style="font-size: 12px;" class="btn btn-success" href="../../../Reservas/views/Listado.php">Reservas</a>
+                                    <a style="font-size: 12px;" class="btn btn-success" href="../../../Reservas/views/Listado.php">Reservass</a>
                                     <?php
                                 } else {
                                     ?>

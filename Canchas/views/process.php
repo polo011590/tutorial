@@ -11,3 +11,4 @@ if ($op == 1) {
     $model->Registrar_Cancha($nombre, $direccion, $correo);
 }
 
+?>

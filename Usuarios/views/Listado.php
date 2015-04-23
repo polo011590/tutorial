@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -30,7 +30,7 @@ and open the template in the editor.
             <table class="table table-striped" style="border: solid 2px #003bb3" >
                 <thead>
                     <tr>
-                        <th>Numero</th>
+                        <th>Numeros</th>
                         <th>Cedula</th>
                         <th>Nombres</th>
                         <th>Apellidos</th>

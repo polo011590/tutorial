@@ -31,7 +31,7 @@ and open the template in the editor.
             <table class="table table-striped" style="border: solid 2px #003bb3" >
                 <thead>
                     <tr>
-                        <th>Numero</th>
+                        <th>Numeros</th>
                         <th>Codigo</th>
                         <th>Nombre</th>
                         <th>Direccion</th>

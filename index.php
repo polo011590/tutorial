@@ -7,7 +7,7 @@
 	</head>
 	<body>
            
-		
+	<p>redireccion</p>	
 		
 	</body>
 </html>

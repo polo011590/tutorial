@@ -104,4 +104,36 @@ class model {
         OCICommit($conn);
         OCILogoff($conn);
       }
+      
+         function Registrar_Administrador($cedula) {
+        require_once '../../config.php';
+        $puente = new config();
+        $puente->Conectar_BD();
+        $conn = $puente->Conectar_BD();
+        $query = OCIParse($conn, "BEGIN inseradmin(:dato1); END;");
+        OCIBindByName($query, ":dato1", $cedula);
+         OCIExecute($query, OCI_DEFAULT);
+//        echo oci_num_rows($query);
+        OCICommit($conn);
+        OCILogoff($conn);
+        echo 'Admin registro Exito!';
+    }
+
+    function Get_Usuarios() {
+         require_once'../../config.php';
+        $puente = new config();
+        $puente->Conectar_BD();
+        $conn = $puente->Conectar_BD();
+        $stid = oci_parse($conn, 'select ID,NOMBRES ,APELLIDOS from USUARIOS');
+        oci_execute($stid);
+     echo '<datalist id="usuarios">';
+        while (($row = oci_fetch_array($stid, OCI_BOTH)) != false) {
+             echo '<option label="' . $row[1] . ''.$row[2].'" value="' . $row[0] . '">';
+        }
+        echo '</datalist>';
+
+        oci_free_statement($stid);
+        oci_close($conn);
+    }
+
 }

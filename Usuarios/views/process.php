@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 require_once '../Model/model.php';
 $model = new model();
@@ -23,3 +23,5 @@ if ($op == 1) {
     
 }
 
+
+?>
